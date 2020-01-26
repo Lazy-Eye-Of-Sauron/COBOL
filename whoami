@@ -1,0 +1,21 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. WHOAMI.
+AUTHOR. Nick Koch.
+
+DATA DIVISION.
+   WORKING-STORAGE SECTION.
+   01 name PIC A(30). *> variable for name, names are alphabetic, and are limited to 30 characters
+   01 email PIC X(30). *> variable for email, emails are alphanumeric. emails are limited to 30 characters
+   01 occupation PIC A(7). *> variable for accupation, occupations are alphabetic. occupation is limited to 7 characters, anymore and it will output the rest of the sentence farther than it needs to be
+   01 school PIC A(30). *> variable for school, schools are alphabetic, and limited to 30 characters
+
+PROCEDURE DIVISION.
+   DISPLAY 'Hello World'. *> outputs hello world
+   MOVE 'Nick' TO name. *> assigns 'nick' to variable name
+   MOVE 'nkoch93@protonmail.com' TO email. *> assigns 'nkoch93@protonmail.com' to variable email
+   MOVE 'student' TO occupation. *> assigns 'student' to variable occupation
+   MOVE 'Pensacola State College' TO school. *> assigns 'pensacola state college' to variable school
+   DISPLAY "My name is "name. *> prints output as "my name is nick"
+   DISPLAY "My email is "email. *> prints output as "My email is nkoch93@protonmail.com"
+   DISPLAY "I am a "occupation " at "school. *> prints output as "I am a student at pensacola state college". 
+STOP RUN.
